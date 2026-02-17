@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 7: Seguridad Informática</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="nav-brand">← <a href="../index.html" style="color: inherit;">Volver al Índice</a></div>
+        </div>
+    </nav>
+
+    <header class="chapter-header">
+        <div class="container">
+            <div class="chapter-number">Capítulo 07</div>
+            <h1 class="chapter-title">Seguridad Informática</h1>
+            <p class="chapter-description">Aprende a proteger sistemas y datos contra amenazas cibernéticas modernas.
+            </p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>🔒 Fundamentos de Ciberseguridad</h2>
+
+                <h3>Los Tres Pilares (CIA Triad)</h3>
+                <ul>
+                    <li><strong>Confidencialidad</strong>: Información accesible solo a personas autorizadas</li>
+                    <li><strong>Integridad</strong>: Datos no modificados sin autorización</li>
+                    <li><strong>Disponibilidad</strong>: Sistemas accesibles cuando se necesitan</li>
+                </ul>
+
+                <h3>Principios de Seguridad</h3>
+                <ul>
+                    <li><strong>Defensa en Profundidad</strong>: Múltiples capas de seguridad</li>
+                    <li><strong>Mínimo Privilegio</strong>: Usuarios solo tienen permisos necesarios</li>
+                    <li><strong>Seguridad por Diseño</strong>: Incorporada desde el inicio</li>
+                    <li><strong>Fallar de Forma Segura</strong>: Errores no comprometen seguridad</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>🦠 Tipos de Malware</h2>
+
+                <h3>Virus</h3>
+                <ul>
+                    <li>Se adjunta a archivos legítimos</li>
+                    <li>Requiere acción del usuario para activarse</li>
+                    <li>Se replica a otros archivos</li>
+                </ul>
+
+                <h3>Gusanos (Worms)</h3>
+                <ul>
+                    <li>Se propaga automáticamente sin intervención</li>
+                    <li>Explota vulnerabilidades de red</li>
+                    <li>Puede saturar redes</li>
+                </ul>
+
+                <h3>Troyanos</h3>
+                <ul>
+                    <li>Se disfraza de software legítimo</li>
+                    <li>Crea puertas traseras para atacantes</li>
+                    <li>No se replica</li>
+                </ul>
+
+                <h3>Ransomware</h3>
+                <ul>
+                    <li>Encripta archivos del usuario</li>
+                    <li>Exige rescate para desencriptar</li>
+                    <li>Una de las amenazas más lucrativas</li>
+                </ul>
+
+                <h3>Spyware</h3>
+                <ul>
+                    <li>Recopila información sin consentimiento</li>
+                    <li>Keyloggers registran pulsaciones de teclado</li>
+                    <li>Roba contraseñas y datos personales</li>
+                </ul>
+
+                <h3>Adware</h3>
+                <ul>
+                    <li>Muestra publicidad no deseada</li>
+                    <li>Rastrea hábitos de navegación</li>
+                    <li>Generalmente menos dañino pero molesto</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>⚔️ Vectores de Ataque</h2>
+
+                <h3>Phishing</h3>
+                <ul>
+                    <li>Emails fraudulentos que parecen legítimos</li>
+                    <li>Buscan robar credenciales o información</li>
+                    <li><strong>Spear Phishing</strong>: Ataques dirigidos a personas específicas</li>
+                    <li><strong>Whaling</strong>: Phishing a ejecutivos de alto nivel</li>
+                </ul>
+
+                <h3>Social Engineering</h3>
+                <ul>
+                    <li>Manipula psicológicamente a las personas</li>
+                    <li>Explota confianza humana</li>
+                    <li><strong>Pretexting</strong>: Crear escenarios falsos</li>
+                    <li><strong>Baiting</strong>: Ofrecer algo para tentar a la víctima</li>
+                </ul>
+
+                <h3>Man-in-the-Middle (MitM)</h3>
+                <ul>
+                    <li>Atacante intercepta comunicación entre dos partes</li>
+                    <li>Puede leer o modificar mensajes</li>
+                    <li>Común en Wi-Fi públicas no seguras</li>
+                </ul>
+
+                <h3>SQL Injection</h3>
+                <ul>
+                    <li>Inserta código SQL malicioso en formularios</li>
+                    <li>Puede revelar o modificar bases de datos</li>
+                    <li>Una de las vulnerabilidades web más comunes</li>
+                </ul>
+
+                <h3>DDoS (Distributed Denial of Service)</h3>
+                <ul>
+                    <li>Inunda sistema con tráfico para hacerlo inaccesible</li>
+                    <li>Usa botnets (redes de computadoras comprometidas)</li>
+                    <li>Afecta disponibilidad del servicio</li>
+                </ul>
+
+                <h3>Zero-Day Exploits</h3>
+                <ul>
+                    <li>Aprovecha vulnerabilidades desconocidas</li>
+                    <li>No hay parche disponible</li>
+                    <li>Extremadamente valiosos para atacantes</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>🛡️ Técnicas Defensivas</h2>
+
+                <h3>Encriptación</h3>
+                <ul>
+                    <li><strong>Simétrica</strong>: Misma clave para encriptar y desencriptar (AES)</li>
+                    <li><strong>Asimétrica</strong>: Par de claves pública/privada (RSA)</li>
+                    <li><strong>Hashing</strong>: Función unidireccional (SHA-256)</li>
+                    <li><strong>TLS/SSL</strong>: Encriptación para comunicaciones web (HTTPS)</li>
+                </ul>
+
+                <h3>Autenticación</h3>
+                <ul>
+                    <li><strong>Contraseñas Fuertes</strong>: Largas, complejas, únicas</li>
+                    <li><strong>2FA/MFA</strong>: Autenticación de dos/múltiples factores</li>
+                    <li><strong>Biométricos</strong>: Huellas, reconocimiento facial</li>
+                    <li><strong>Tokens</strong>: Claves temporales (TOTP)</li>
+                </ul>
+
+                <h3>Firewalls</h3>
+                <ul>
+                    <li>Filtran tráfico de red</li>
+                    <li>Bloquean conexiones no autorizadas</li>
+                    <li>Basados en reglas configurables</li>
+                    <li><strong>WAF</strong>: Web Application Firewall para aplicaciones web</li>
+                </ul>
+
+                <h3>Antivirus y Anti-malware</h3>
+                <ul>
+                    <li>Escanean archivos buscando amenazas conocidas</li>
+                    <li>Análisis heurístico para amenazas nuevas</li>
+                    <li>Actualizaciones constantes de definiciones</li>
+                    <li>Protección en tiempo real</li>
+                </ul>
+
+                <h3>IDS/IPS</h3>
+                <ul>
+                    <li><strong>IDS</strong>: Intrusion Detection System - detecta intrusiones</li>
+                    <li><strong>IPS</strong>: Intrusion Prevention System - bloquea amenazas</li>
+                    <li>Monitorean tráfico de red y comportamiento</li>
+                </ul>
+
+                <h3>Gestión de Parches</h3>
+                <ul>
+                    <li>Actualizar software regularmente</li>
+                    <li>Corrige vulnerabilidades conocidas</li>
+                    <li>Automatizar cuando sea posible</li>
+                </ul>
+
+                <h3>Backups</h3>
+                <ul>
+                    <li>Copias de seguridad regulares</li>
+                    <li><strong>Regla 3-2-1</strong>: 3 copias, 2 medios diferentes, 1 fuera del sitio</li>
+                    <li>Protección contra ransomware</li>
+                    <li>Probar restauración periódicamente</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>✅ Mejores Prácticas</h2>
+
+                <h3>Para Usuarios</h3>
+                <ul>
+                    <li>Usar contraseñas fuertes y únicas</li>
+                    <li>Habilitar autenticación de dos factores</li>
+                    <li>Mantener software actualizado</li>
+                    <li>No hacer clic en enlaces sospechosos</li>
+                    <li>Verificar URLs antes de ingresar datos</li>
+                    <li>Usar VPN en Wi-Fi públicas</li>
+                    <li>Desconfiar de emails no solicitados</li>
+                </ul>
+
+                <h3>Para Desarrolladores</h3>
+                <ul>
+                    <li>Validar todas las entradas de usuario</li>
+                    <li>Usar prepared statements (SQL)</li>
+                    <li>Implementar control de acceso adecuado</li>
+                    <li>Nunca almacenar contraseñas en texto plano</li>
+                    <li>Usar HTTPS siempre</li>
+                    <li>Mantener dependencias actualizadas</li>
+                    <li>Realizar auditorías de seguridad</li>
+                </ul>
+
+                <h3>Para Organizaciones</h3>
+                <ul>
+                    <li>Capacitación en seguridad para empleados</li>
+                    <li>Políticas de seguridad claras</li>
+                    <li>Plan de respuesta a incidentes</li>
+                    <li>Segregación de redes</li>
+                    <li>Monitoreo continuo</li>
+                    <li>Auditorías y tests de penetración</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>🎯 Conceptos Clave del Capítulo</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🦠</div>
+                        <h3 class="card-title">Amenazas</h3>
+                        <p class="card-description">Malware (virus, ransomware), phishing, y ataques de red son amenazas
+                            constantes que evolucionan.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🛡️</div>
+                        <h3 class="card-title">Defensa en Capas</h3>
+                        <p class="card-description">Combinar firewalls, encriptación, autenticación, y educación para
+                            protección robusta.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">👤</div>
+                        <h3 class="card-title">Factor Humano</h3>
+                        <p class="card-description">Los usuarios son el eslabón más débil. La educación y conciencia son
+                            fundamentales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-2xl);">
+                <a href="capitulo-06.html" class="btn btn-secondary">← Capítulo Anterior</a>
+                <a href="capitulo-08.html" class="btn btn-primary">Siguiente Capítulo →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Capítulo 7 de 9 - Introducción a la Computación</p>
+            <p><a href="../index.html">Volver al índice principal</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 3: La Web - Fundamentos Digitales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="nav-brand">← <a href="../index.html" style="color: inherit;">Volver al Índice</a></div>
+        </div>
+    </nav>
+
+    <header class="chapter-header">
+        <div class="container">
+            <div class="chapter-number">CAPÍTULO 03</div>
+            <h1 class="chapter-title">La Web</h1>
+            <p class="chapter-description">Construyendo el Mundo Digital – Cómo se crean las páginas que ves todos los días</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>🌐 ¿Qué es la Web?</h2>
+                <p>
+                    Cada vez que abres un navegador web (Chrome, Firefox, Safari), estás accediendo a la <strong>World Wide Web</strong>: 
+                    miles de millones de páginas conectadas entre sí por enlaces (links).
+                </p>
+                <p>
+                    Pero <strong>¿cómo están construidas estas páginas?</strong> La respuesta: con tres tecnologías fundamentales.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>🏗️ Los Tres Pilares de la Web</h2>
+                
+                <div class="card">
+                    <h3>1. HTML: La Estructura</h3>
+                    <p>
+                        <strong>HTML (HyperText Markup Language)</strong> es como el esqueleto de una página web. 
+                        Define QUÉ tiene la página: títulos, párrafos, imágenes, enlaces, etc.
+                    </p>
+                    <pre style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi Primera Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este es mi primer párrafo.&lt;/p&gt;
+    &lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="card">
+                    <h3>2. CSS: El Estilo</h3>
+                    <p>
+                        <strong>CSS (Cascading Style Sheets)</strong> es como la decoración. Define CÓMO se ve la página: 
+                        colores, tamaños, posiciones, fuentes, etc.
+                    </p>
+                    <pre style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #3498db;
+    font-size: 32px;
+}
+
+.destacado {
+    background-color: yellow;
+    padding: 10px;
+}</code></pre>
+                </div>
+
+                <div class="card">
+                    <h3>3. JavaScript: La Interactividad</h3>
+                    <p>
+                        <strong>JavaScript</strong> es como la conducta. Hace que la página RESPONDA a tus acciones: 
+                        clics, movimientos del mouse, formularios, animaciones, etc.
+                    </p>
+                    <pre style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>// Mostrar alerta al hacer clic
+document.querySelector('button').addEventListener('click', function() {
+    alert('¡Hiciste clic!');
+});</code></pre>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🧱 Elementos HTML Fundamentales</h2>
+                <p>Estos son los bloques de construcción que verás en casi toda página web:</p>
+
+                <table style="width: 100%; border-collapse: collapse; margin: var(--space-md) 0;">
+                    <thead>
+                        <tr style="background: var(--gradient-primary); color: white;">
+                            <th style="padding: var(--space-sm); text-align: left;">Etiqueta</th>
+                            <th style="padding: var(--space-sm); text-align: left;">Propósito</th>
+                            <th style="padding: var(--space-sm); text-align: left;">Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: var(--space-sm);"><code>&lt;h1&gt;</code></td>
+                            <td style="padding: var(--space-sm);">Título principal</td>
+                            <td style="padding: var(--space-sm);"><code>&lt;h1&gt;Mi Título&lt;/h1&gt;</code></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: var(--space-sm);"><code>&lt;p&gt;</code></td>
+                            <td style="padding: var(--space-sm);">Párrafo</td>
+                            <td style="padding: var(--space-sm);"><code>&lt;p&gt;Texto...&lt;/p&gt;</code></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: var(--space-sm);"><code>&lt;a&gt;</code></td>
+                            <td style="padding: var(--space-sm);">Enlace</td>
+                            <td style="padding: var(--space-sm);"><code>&lt;a href="url"&gt;Click&lt;/a&gt;</code></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: var(--space-sm);"><code>&lt;img&gt;</code></td>
+                            <td style="padding: var(--space-sm);">Imagen</td>
+                            <td style="padding: var(--space-sm);"><code>&lt;img src="foto.jpg"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: var(--space-sm);"><code>&lt;div&gt;</code></td>
+                            <td style="padding: var(--space-sm);">Contenedor</td>
+                            <td style="padding: var(--space-sm);"><code>&lt;div&gt;...&lt;/div&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-section">
+                <h2>🎨 CSS: Diseñando tu Página</h2>
+                <p>CSS funciona con <strong>selectores</strong> que apuntan a elementos HTML y les aplican estilos:</p>
+
+                <pre style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>/* Por etiqueta */
+h1 {
+    color: blue;
+}
+
+/* Por clase */
+.destacado {
+    background-color: yellow;
+}
+
+/* Por ID */
+#titulo-principal {
+    font-size: 48px;
+    text-align: center;
+}</code></pre>
+
+                <div style="background: var(--color-darker); padding: var(--space-lg); border-radius: var(--radius-md); margin-top: var(--space-md);">
+                    <h3>Box Model: Cómo se dimensionan los elementos</h3>
+                    <p>Cada elemento HTML es una "caja" con:</p>
+                    <ul>
+                        <li><strong>Content:</strong> El contenido real</li>
+                        <li><strong>Padding:</strong> Espacio interno alrededor del contenido</li>
+                        <li><strong>Border:</strong> El borde de la caja</li>
+                        <li><strong>Margin:</strong> Espacio externo entre elementos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🔬 Práctica: Analiza una Página Real</h2>
+                
+                <div class="card">
+                    <h3>✅ Ejercicio: Inspecciona un Sitio Web</h3>
+                    <p><strong>Paso 1:</strong> Abre cualquier sitio web (ej: un periódico online)</p>
+                    <p><strong>Paso 2:</strong> Haz clic derecho → "Inspeccionar" o presiona <code>F12</code></p>
+                    <p><strong>Paso 3:</strong> Verás las Herramientas de Desarrollador con pestañas:</p>
+                    <ul>
+                        <li><strong>Elements:</strong> El código HTML/CSS de la página</li>
+                        <li><strong>Console:</strong> Mensajes de JavaScript y errores</li>
+                        <li><strong>Network:</strong> Todos los archivos que cargó la página</li>
+                    </ul>
+                    
+                    <p style="margin-top: var(--space-md);"><strong>Cosas para observar:</strong></p>
+                    <ol>
+                        <li>Pasa el cursor sobre el código HTML → Se resalta el elemento en la página</li>
+                        <li>Encuentra un párrafo (<code>&lt;p&gt;</code>) y ve sus estilos CSS en el panel derecho</li>
+                        <li>Modifica el texto directamente en el inspector (solo tú lo ves)</li>
+                        <li>Cambia colores, tamaños, o elimina elementos para ver qué pasa</li>
+                    </ol>
+
+                    <p style="background: var(--color-primary); color: white; padding: var(--space-md); border-radius: var(--radius-md); margin-top: var(--space-lg);">
+                        💡 <strong>Dato importante:</strong> Lo que modificas en el inspector NO cambia el sitio real, 
+                        solo tu copia local. Refresca la página y todo vuelve a la normalidad.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Ejercicio Avanzado: Recrea la Estructura</h3>
+                    <p>Elige una página simple (ej: portada de un periódico) y trata de identificar:</p>
+                    <ol>
+                        <li><strong>Header:</strong> El encabezado con logo y navegación</li>
+                        <li><strong>Main Content:</strong> El contenido principal (artículos, imágenes)</li>
+                        <li><strong>Sidebar:</strong> Barra lateral con contenido secundario</li>
+                        <li><strong>Footer:</strong> Pie de página con enlaces y copyright</li>
+                    </ol>
+                    <p>Dibuja un esquema simple de cómo está organizada la página usando cajas.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🎯 Conceptos Clave</h2>
+<div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🏗️</div>
+                        <h3 class="card-title">HTML: Estructura</h3>
+                        <p class="card-description">Define QUÉ tiene la página: títulos, texto, imágenes, enlaces.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎨</div>
+                        <h3 class="card-title">CSS: Estilo</h3>
+                        <p class="card-description">Define CÓMO se ve: colores, tamaños, posiciones, fuentes.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3 class="card-title">JavaScript: Interactividad</h3>
+                        <p class="card-description">Hace que la página RESPONDA a tus acciones.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔍</div>
+                        <h3 class="card-title">DevTools</h3>
+                        <p class="card-description">Herramientas de desarrollador para inspeccionar cualquier sitio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" style="background: var(--color-darker); padding: var(--space-xl); border-radius: var(--radius-lg);">
+                <h2>🚀 Lo Que Ahora Puedes Hacer</h2>
+                <ul style="font-size: 1.125rem; line-height: 1.8;">
+                    <li>✅ <strong>Entender cómo funcionan los sitios web:</strong> Ya no son cajas negras</li>
+                    <li>✅ <strong>Crear tus propias páginas:</strong> Tienes la base para empezar</li>
+                    <li>✅ <strong>Modificar sitios existentes:</strong> Inspeccionar y aprender de otros</li>
+                    <li>✅ <strong>Comunicarte con diseñadores web:</strong> Entiendes su lenguaje</li>
+                </ul>
+                <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-top: var(--space-lg);">
+                    Ahora sabes cómo se construye el mundo digital que ves cada día.
+                </p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-2xl);">
+                <a href="capitulo-02.html" class="btn btn-secondary">← Cap. Anterior</a>
+                <a href="capitulo-04.html" class="btn btn-primary">Siguiente: Internet →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Capítulo 3 de 6 - Fundamentos Digitales</p>
+            <p><a href="../index.html">Volver al índice principal</a></p>
+        </div>
+    </footer>
+</body>
+</html>

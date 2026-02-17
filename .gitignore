@@ -1,0 +1,25 @@
+# Archivos de sistema
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*~
+
+# Archivos de backup
+*-old.html
+*.backup
+
+# Brain artifacts (no necesarios en el repo)
+.gemini/
+
+# Docker files (no necesarios para GitHub Pages)
+Dockerfile
+nginx.conf
+.dockerignore
+deploy.sh

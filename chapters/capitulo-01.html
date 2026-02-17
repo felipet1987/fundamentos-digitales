@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 1: Arquitectura de Computadores - Fundamentos Digitales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="nav-brand">← <a href="../index.html" style="color: inherit;">Volver al Índice</a></div>
+            <div class="nav-links">
+                <a href="#lecciones">Lecciones</a>
+                <a href="#contenido">Contenido</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-header">
+        <div class="container">
+            <div class="chapter-number">CAPÍTULO 01</div>
+            <h1 class="chapter-title">Arquitectura de Computadores</h1>
+            <p class="chapter-description">Abriendo la "Caja Negra" – Entiende cómo funcionan realmente las computadoras
+            </p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>🔓 AbrIendo la Caja Negra</h2>
+                <p>
+                    Para la mayoría de las personas, una computadora es una <strong>caja negra mágica</strong>:
+                    haces clic en botones, las cosas funcionan (o no), y no tienes idea de qué sucede adentro.
+                </p>
+                <p>
+                    Pero no hay magia. Solo componentes físicos trabajando juntos de manera coordinada.
+                    En este capítulo, vamos a "abrir la caja" y entender <strong>cómo funciona realmente</strong>una
+                    computadora.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>🍴 La Analogía del Restaurante</h2>
+                <p>
+                    Para entender cómo funcionan los componentes de una computadora, vamos a usar una analogía simple:
+                    <strong>un restaurante</strong>.
+                </p>
+
+                <div class="card">
+                    <h3>👨‍🍳 CPU = El Chef</h3>
+                    <p>
+                        El <strong>CPU (Central Processing Unit)</strong> es como el chef en la cocina.
+                        Es quien realmente <strong>hace el trabajo</strong>: procesa ingredientes (datos),
+                        sigue recetas (instrucciones), y prepara platos (resultados).
+                    </p>
+                    <ul>
+                        <li><strong>Velocidad:</strong> Un chef rápido puede preparar más platos por hora (medido en
+                            GHz)</li>
+                        <li><strong>Núcleos:</strong> Tener múltiples chefs (multi-core) permite preparar varios platos
+                            simultáneamente</li>
+                        <li><strong>Especialización:</strong> Cada chef es experto en su tarea específica</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🔪 RAM = La Encimera</h3>
+                    <p>
+                        La <strong>RAM (Random Access Memory)</strong> es como la encimera de trabajo del chef.
+                        Es donde coloca todos los ingredientes y utensilios que está usando <strong>en este
+                            momento</strong>.
+                    </p>
+                    <ul>
+                        <li><strong>Acceso rápido:</strong> Todo está al alcance de la mano</li>
+                        <li><strong>Espacio limitado:</strong> Solo cabe cierta cantidad de cosas</li>
+                        <li><strong>Temporal:</strong> Al terminar el servicio (apagar la PC), se limpia completamente
+                        </li>
+                        <li><strong>Más espacio = más eficiencia:</strong> Con más encimera, puedes trabajar en más
+                            platos a la vez</li>
+                    </ul>
+                    <p
+                        style="margin-top: var(--space-md); padding: var(--space-md); background: var(--color-darker); border-radius: var(--radius-md);">
+                        💡 <strong>Por qué más RAM acelera tu computadora:</strong> Si la encimera es pequeña,
+                        el chef debe constantemente guardar ingredientes en la despensa y volver a sacarlos.
+                        Con más espacio, todo está disponible inmediatamente.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🗄️ Disco Duro = La Despensa</h3>
+                    <p>
+                        El <strong>Disco Duro (HDD/SSD)</strong> es como la despensa del restaurante.
+                        Es donde se guardan todos los ingredientes a largo plazo.
+                    </p>
+                    <ul>
+                        <li><strong>Gran capacidad:</strong> Puedes almacenar muchísimos ingredientes</li>
+                        <li><strong>Más lento:</strong> Toma tiempo ir a la despensa y traer algo (vs. tenerlo en la
+                            encimera)</li>
+                        <li><strong>Permanente:</strong> Los ingredientes se quedan ahí incluso cuando cierras el
+                            restaurante</li>
+                        <li><strong>HDD vs SSD:</strong> Como una despensa con puertas pesadas (HDD) vs. puertas
+                            automáticas (SSD)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🚪 Motherboard = El Edificio del Restaurante</h3>
+                    <p>
+                        La <strong>Placa Madre (Motherboard)</strong> es la estructura que conecta todo.
+                        Los pasillos entre la cocina, la despensa, y el comedor.
+                    </p>
+                    <ul>
+                        <li>Provee la infraestructura para que todos los componentes se comuniquen</li>
+                        <li>Define qué componentes pueden trabajar juntos</li>
+                        <li>Incluye el "sistema eléctrico" que alimenta todo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>⚙️ Los Componentes en Detalle</h2>
+
+                <h3>CPU: El Procesador</h3>
+                <p>El CPU sigue un ciclo constante llamado <strong>Fetch-Decode-Execute</strong>:</p>
+                <ol>
+                    <li><strong>Fetch (Buscar):</strong> Obtener la siguiente instrucción de la memoria</li>
+                    <li><strong>Decode (Decodificar):</strong> Entender qué debe hacer</li>
+                    <li><strong>Execute (Ejecutar):</strong> Realizar la operación</li>
+                    <li><strong>Store (Almacenar):</strong> Guardar el resultado</li>
+                </ol>
+                <p>Este ciclo se repite <strong>miles de millones de veces por segundo</strong> (GHz).</p>
+
+                <div
+                    style="background: var(--color-darker); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-md) 0;">
+                    <h4>🔢 Núcleos vs. Velocidad</h4>
+                    <p><strong>Velocidad (GHz):</strong> Qué tan rápido trabaja cada núcleo</p>
+                    <p><strong>Núcleos:</strong> Cuántos procesadores independientes tienes</p>
+                    <p><strong>Analogía:</strong> ¿Prefieres un chef muy rápido o cuatro chefs a velocidad normal?
+                        Depende de la tarea.</p>
+                </div>
+
+                <h3>RAM: Memoria de Trabajo</h3>
+                <p>Características importantes:</p>
+                <ul>
+                    <li><strong>Volátil:</strong> Se borra al apagar la PC (como limpiar la encimera)</li>
+                    <li><strong>Rápida:</strong> Acceso casi instantáneo a cualquier dato</li>
+                    <li><strong>Limitada:</strong> Típicamente 8-32 GB en computadoras modernas</li>
+                </ul>
+
+                <h3>Almacenamiento: Permanente pero Lento</h3>
+                <table style="width: 100%; border-collapse: collapse; margin: var(--space-md) 0;">
+                    <thead>
+                        <tr style="background: var(--gradient-primary); color: white;">
+                            <th style="padding: var(--space-sm); text-align: left;">Tipo</th>
+                            <th style="padding: var(--space-sm); text-align: left;">Velocidad</th>
+                            <th style="padding: var(--space-sm); text-align: left;">Capacidad</th>
+                            <th style="padding: var(--space-sm); text-align: left;">Costo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: var(--space-sm);"><strong>SSD NVMe</strong></td>
+                            <td style="padding: var(--space-sm);">Muy rápido</td>
+                            <td style="padding: var(--space-sm);">256 GB - 4 TB</td>
+                            <td style="padding: var(--space-sm);">$$$</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: var(--space-sm);"><strong>SSD SATA</strong></td>
+                            <td style="padding: var(--space-sm);">Rápido</td>
+                            <td style="padding: var(--space-sm);">256 GB - 4 TB</td>
+                            <td style="padding: var(--space-sm);">$$</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: var(--space-sm);"><strong>HDD</strong></td>
+                            <td style="padding: var(--space-sm);">Lento</td>
+                            <td style="padding: var(--space-sm);">1 TB - 20 TB</td>
+                            <td style="padding: var(--space-sm);">$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-section">
+                <h2>🚀 Cómo Trabajan Juntos</h2>
+                <p>Imagina que quieres abrir un documento de Word:</p>
+                <ol style="line-height: 1.8;">
+                    <li>Haces doble clic en el archivo (está en el <strong>Disco</strong> / Despensa)</li>
+                    <li>El sistema operativo carga Word desde el <strong>Disco</strong> a la <strong>RAM</strong> (de la
+                        despensa a la encimera)</li>
+                    <li>El <strong>CPU</strong> (chef) procesa las instrucciones de Word usando datos de la
+                        <strong>RAM</strong></li>
+                    <li>Cuando escribes, los cambios se guardan en <strong>RAM</strong> primero (encimera)</li>
+                    <li>Al presionar "Guardar", se escribe permanentemente al <strong>Disco</strong> (despensa)</li>
+                </ol>
+
+                <div
+                    style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); padding: var(--space-lg); border-radius: var(--radius-lg); color: white; margin: var(--space-xl) 0;">
+                    <h3>💡 El Cuello de Botella</h3>
+                    <p style="font-size: 1.125rem;">
+                        La velocidad de tu computadora NO depende solo del CPU. Depende del componente <strong>más
+                            lento</strong>
+                        en la cadena. Es como tener un chef muy rápido pero una despensa muy lejana: el chef pasa más
+                        tiempo
+                        esperando que cocinando.
+                    </p>
+                    <p style="font-size: 1.125rem;">
+                        Por eso, <strong>un SSD puede hacer más diferencia</strong> en velocidad que un CPU más rápido.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🔬 Práctica: Identifica los Componentes</h2>
+                <p>Ahora que entiendes los componentes, es hora de verlos en acción. Aquí hay tres ejercicios prácticos:
+                </p>
+
+                <div class="card">
+                    <h3>✅ Ejercicio 1: Investiga Tu Propia Computadora</h3>
+                    <p><strong>Windows:</strong></p>
+                    <ul>
+                        <li>Presiona <code>Windows + Pausemod</code> o busca "Información del sistema"</li>
+                        <li>Identifica: Procesador (CPU), RAM instalada</li>
+                    </ul>
+                    <p><strong>Mac:</strong></p>
+                    <ul>
+                        <li>Click en el ícono de Apple → "Acerca de este Mac"</li>
+                        <li>Identifica: Chip/Procesador, Memoria (RAM)</li>
+                    </ul>
+                    <p><strong>Pregúntate:</strong></p>
+                    <ul>
+                        <li>¿Cuántos núcleos tiene tu CPU?</li>
+                        <li>¿Cuánta RAM tienes?</li>
+                        <li>¿Tienes SSD o HDD? (SSD es mucho más rápido)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Ejercicio 2: Observa el Uso de Recursos</h3>
+                    <p><strong>Windows:</strong> Ctrl + Shift + Esc → Pestaña "Rendimiento"</p>
+                    <p><strong>Mac:</strong> Aplicaciones → Utilidades → Monitor de Actividad</p>
+                    <p><strong>Observa:</strong></p>
+                    <ul>
+                        <li>% de uso del CPU cuando abres un programa pesado</li>
+                        <li>Cuánta RAM se está usando cuando tienes muchas pestañas abiertas</li>
+                        <li>Velocidad de lectura/escritura del disco</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Ejercicio 3: Compara Especificaciones</h3>
+                    <p>Ve a un sitio web de venta de computadoras y compara dos modelos:</p>
+                    <ul>
+                        <li>¿Cuál tiene CPU más rápido? (GHz más alto o modelo más reciente)</li>
+                        <li>¿Cuál tiene más RAM?</li>
+                        <li>¿Cuál tiene SSD? (mucho mejor que HDD)</li>
+                    </ul>
+                    <p><strong>Pregúntate:</strong> ¿Para qué uso sería mejor cada una?</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🎯 Conceptos Clave</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">👨‍🍳</div>
+                        <h3 class="card-title">CPU = Chef</h3>
+                        <p class="card-description">Procesa instrucciones. Más núcleos = más chefs trabajando.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔪</div>
+                        <h3 class="card-title">RAM = Encimera</h3>
+                        <p class="card-description">Espacio de trabajo temporal. Más RAM = trabajar en más cosas a la
+                            vez.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🗄️</div>
+                        <h3 class="card-title">Disco = Despensa</h3>
+                        <p class="card-description">Almacenamiento permanente. SSD es mucho más rápido que HDD.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3 class="card-title">El Cuello de Botella</h3>
+                        <p class="card-description">Tu PC es tan rápida como su componente más lento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section"
+                style="background: var(--color-darker); padding: var(--space-xl); border-radius: var(--radius-lg);">
+                <h2>🚀 Lo Que Ahora Puedes Hacer</h2>
+                <p>Con este conocimiento, ahora puedes:</p>
+                <ul style="font-size: 1.125rem; line-height: 1.8;">
+                    <li>✅ <strong>Diagnosticar problemas:</strong> "Mi PC está lenta" → Verificar si falta RAM o si el
+                        disco está lleno</li>
+                    <li>✅ <strong>Comprar inteligentemente:</strong> Saber si una computadora es buena para tus
+                        necesidades</li>
+                    <li>✅ <strong>Optimizar rendimiento:</strong> Entender qué upgrade hacer (más RAM vs. SSD vs. CPU
+                        mejor)</li>
+                    <li>✅ <strong>Comunicarte efectivamente:</strong> Hablar con técnicos usando términos correctos</li>
+                </ul>
+                <p
+                    style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-top: var(--space-lg);">
+                    Ya no es una caja negra. Ahora entiendes cómo funciona.
+                </p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-2xl);">
+                <a href="introduccion.html" class="btn btn-secondary">← Introducción</a>
+                <a href="capitulo-02.html" class="btn btn-primary">Siguiente: Programación →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Capítulo 1 de 6 - Fundamentos Digitales</p>
+            <p><a href="../index.html">Volver al índice principal</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

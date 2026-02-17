@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Capítulo 4: Internet - Fundamentos Digitales</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="nav"><div class="container nav-container"><div class="nav-brand">← <a href="../index.html" style="color: inherit;">Volver al Índice</a></div></div></nav>
+    <header class="chapter-header"><div class="container"><div class="chapter-number">CAPÍTULO 04</div><h1 class="chapter-title">Internet</h1><p class="chapter-description">La Infraestructura Invisible – Qué sucede cuando "se cae" el Internet</p></div></header>
+    <section class="section"><div class="container">
+        <div class="content-section"><h2>🌍 De cables a paquetes</h2><p>Internet NO es mágico ni inalámbrico completamente. Es una <strong>red física masiva de cables</strong> que conecta computadoras en todo el mundo.</p></div>
+        <div class="content-section"><h2>⚙️ TCP/IP: El Lenguaje de Internet</h2><p>Para que las computadoras se entiendan, usan <strong>protocolos</strong> (reglas estándar). El más importante:</p>
+        <ul><li><strong>IP (Internet Protocol):</strong> Direcciones únicas para cada dispositivo (ej: 192.168.1.1)</li><li><strong>TCP (Transmission Control Protocol):</strong> Garantiza entrega correcta de datos</li></ul></div>
+        <div class="content-section"><h2>📍 DNS: El directorio telefónico de Internet</h2><p>Escribes <code>google.com</code> pero las computadoras necesitan la dirección IP. El <strong>DNS (Domain Name System)</strong> traduce nombres a IPs.</p></div>
+        <div class="content-section" style="background: var(--color-darker); padding: var(--space-xl); border-radius: var(--radius-lg);"><h2>🚨 Puntos de falla: ¿Por qué "se cae" Internet?</h2>
+        <ol style="font-size: 1.125rem;"><li><strong>Cable cortado:</strong> Fibra óptica dañada (construcción, terremotos)</li><li><strong>Servidor caído:</strong> El servidor que aloja un sitio está apagado</li><li><strong>DNS no responde:</strong> No puede traducir el nombre a IP</li><li><strong>Sobrecarga:</strong> Demasiados usuarios simultáneos</li><li><strong>Ataque DDoS:</strong> Inundan el servidor con peticiones falsas</li></ol></div>
+        <div class="content-section"><h2>🔬 Práctica</h2><div class="card"><h3>✅ Traceroute: Sigue la ruta de tus datos</h3><p><strong>Windows:</strong> <code>tracert google.com</code></p><p><strong>Mac/Linux:</strong> <code>traceroute google.com</code></p><p>Verás cada "salto" (router) que atraviesan tus datos desde tu computadora hasta Google.</p></div></div>
+        <div class="content-section"><h2>🎯 Conceptos Clave</h2><div class="card-grid">
+            <div class="card"><div class="card-icon">🔌</div><h3 class="card-title">Red Física</h3><p class="card-description">Internet son cables reales conectando el mundo.</p></div>
+            <div class="card"><div class="card-icon">📍</div><h3 class="card-title">DNS</h3><p class="card-description">Traduce nombres (google.com) a direcciones IP.</p></div>
+            <div class="card"><div class="card-icon">🚨</div><h3 class="card-title">Puntos de Falla</h3><p class="card-description">Cables, servidores, DNS, sobrecarga, ataques.</p></div>
+        </div></div>
+        <div style="display: flex; justify-content: space-between; margin-top: var(--space-2xl);"><a href="capitulo-03.html" class="btn btn-secondary">← Cap. Anterior</a><a href="capitulo-05.html" class="btn btn-primary">Siguiente: Seguridad →</a></div>
+    </div></section>
+    <footer class="footer"><div class="container footer-content"><p>Capítulo 4 de 6 - Fundamentos Digitales</p><p><a href="../index.html">Volver al índice principal</a></p></div></footer>
+</body></html>

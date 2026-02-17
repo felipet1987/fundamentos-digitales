@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 2: Programación - Fundamentos Digitales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="nav-brand">← <a href="../index.html" style="color: inherit;">Volver al Índice</a></div>
+            <div class="nav-links">
+                <a href="#lecciones">Lecciones</a>
+                <a href="#contenido">Contenido</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="chapter-header">
+        <div class="container">
+            <div class="chapter-number">CAPÍTULO 02</div>
+            <h1 class="chapter-title">Programación</h1>
+            <p class="chapter-description">El Lenguaje de las Máquinas – Crea tus primeras instrucciones</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>💬 ¿Qué es Programar?</h2>
+                <p>
+                    Programar es simplemente <strong>escribir instrucciones para que una computadora las siga</strong>.
+                    Es como escribir una receta de cocina, pero para el CPU (el "chef" que vimos en el capítulo
+                    anterior).
+                </p>
+                <p>
+                    La diferencia es que las computadoras son <strong>extremadamente literales</strong>.
+                    No pueden improvisar, no entienden el contexto, y harán <em>exactamente</em> lo que les dices,
+                    incluso si es absurdo.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>🐍 Tu Primer Lenguaje: Python</h2>
+                <p>
+                    Hay cientos de lenguajes de programación, pero vamos a empezar con <strong>Python</strong>
+                    porque es uno de los más fáciles de aprender y leer.
+                </p>
+
+                <div class="card">
+                    <h3>Hola Mundo - Tu Primer Programa</h3>
+                    <p>Por tradición, el primer programa que escribes en cualquier lenguaje es "Hola Mundo":</p>
+                    <pre
+                        style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>print("¡Hola Mundo!")</code></pre>
+                    <p>Eso es todo. Una sola línea. Cuando ejecutas este código, la computadora muestra:
+                        <code>¡Hola Mundo!</code></p>
+                    <p><strong>Lo que hace:</strong> La función <code>print()</code> le dice a la computadora "muestra
+                        esto en pantalla".</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>📦 Variables: Cajas para Guardar Información</h2>
+                <p>
+                    Una <strong>variable</strong> es como una caja etiquetada donde guardas información.
+                    Le das un nombre y un valor.
+                </p>
+
+                <pre
+                    style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>nombre = "Ana"
+edad = 25
+altura = 1.65
+es_estudiante = True
+
+print("Hola, soy", nombre)
+print("Tengo", edad, "años")</code></pre>
+
+                <p><strong>Tipos de datos:</strong></p>
+                <ul>
+                    <li><code>str</code> (string): Texto entre comillas → <code>"Ana"</code></li>
+                    <li><code>int</code> (integer): Números enteros → <code>25</code></li>
+                    <li><code>float</code>: Números decimales → <code>1.65</code></li>
+                    <li><code>bool</code> (boolean): Verdadero o Falso → <code>True</code> / <code>False</code></li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>🔀 Control de Flujo: Tomando Decisiones</h2>
+                <p>Los programas no son solo líneas secuenciales. Pueden tomar <strong>decisiones</strong> y
+                    <strong>repetir acciones</strong>.</p>
+
+                <h3>IF: Decisiones Condicionales</h3>
+                <pre
+                    style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>edad = 18
+
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")</code></pre>
+
+                <p><strong>Lo que hace:</strong></p>
+                <ul>
+                    <li><code>if</code> evalúa una condición (¿es verdadera o falsa?)</li>
+                    <li>Si es verdadera, ejecuta el código indentado debajo</li>
+                    <li><code>else</code> se ejecuta si la condición es falsa</li>
+                </ul>
+
+                <h3>FOR: Repetir Acciones</h3>
+                <pre
+                    style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>for i in range(5):
+    print("Iteración número", i)
+
+# Resultado:
+# Iteración número 0
+# Iteración número 1
+# Iteración número 2
+# Iteración número 3
+# Iteración número 4</code></pre>
+
+                <p><strong>Lo que hace:</strong> Repite el código 5 veces, con <code>i</code> tomando valores de 0 a 4.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>📝 Listas: Colecciones de Datos</h2>
+                <p>Una <strong>lista</strong> es como una caja que contiene múltiples ítems ordenados.</p>
+
+                <pre
+                    style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>frutas = ["manzana", "banana", "naranja"]
+
+print(frutas[0])  # manzana (los índices empiezan en 0)
+print(frutas[1])  # banana
+
+frutas.append("uva")  # Agregar al final
+print(frutas)  # ["manzana", "banana", "naranja", "uva"]
+
+for fruta in frutas:
+    print("Me gusta la", fruta)</code></pre>
+            </div>
+
+            <div class="content-section">
+                <h2>⚙️ Funciones: Reutilizar Código</h2>
+                <p>
+                    Una <strong>función</strong> es un bloque de código reutilizable.
+                    Como una receta que puedes usar múltiples veces.
+                </p>
+
+                <pre
+                    style="background: #1e1e1e; padding: var(--space-md); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>def saludar(nombre):
+    mensaje = "¡Hola, " + nombre + "!"
+    return mensaje
+
+# Usar la función:
+print(saludar("Ana"))    # ¡Hola, Ana!
+print(saludar("Carlos")) # ¡Hola, Carlos!</code></pre>
+
+                <p><strong>Componentes:</strong></p>
+                <ul>
+                    <li><code>def</code>: Define una nueva función</li>
+                    <li><code>saludar</code>: Nombre de la función</li>
+                    <li><code>nombre</code>: Parámetro (entrada)</li>
+                    <li><code>return</code>: Devuelve un resultado (salida)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>🔬 Práctica: Tus Primeros Programas</h2>
+
+                <div class="card">
+                    <h3>✅ Ejercicio 1: Calculadora Básica</h3>
+                    <p>Escribe un programa que sume dos números:</p>
+                    <pre
+                        style="background: #1e1e1e; padding: var(--space-sm); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>numero1 = 10
+numero2 = 5
+
+suma = numero1 + numero2
+print("La suma es:", suma)</code></pre>
+                    <p><strong>Tarea:</strong> Modifícalo para que también reste, multiplique y divida.</p>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Ejercicio 2: Contador</h3>
+                    <p>Escribe un programa que cuente de 1 a 10:</p>
+                    <pre
+                        style="background: #1e1e1e; padding: var(--space-sm); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>for numero in range(1, 11):
+    print(numero)</code></pre>
+                    <p><strong>Desafío:</strong> Modifícalo para que solo imprima números pares.</p>
+                    <details style="margin-top: var(--space-sm);">
+                        <summary style="cursor: pointer; color: var(--color-primary);">Ver solución</summary>
+                        <pre
+                            style="background: #1e1e1e; padding: var(--space-sm); border-radius: var(--radius-md); color: #d4d4d4; margin-top: var(--space-sm); overflow-x: auto;"><code>for numero in range(1, 11):
+    if numero % 2 == 0:  # % es el operador módulo (resto)
+        print(numero)</code></pre>
+                    </details>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Ejercicio 3: Lista de Tareas</h3>
+                    <p>Crea una lista de tareas y muéstralas todas:</p>
+                    <pre
+                        style="background: #1e1e1e; padding: var(--space-sm); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>tareas = ["Estudiar Python", "Hacer ejercicio", "Leer un libro"]
+
+for tarea in tareas:
+    print("- " + tarea)</code></pre>
+                    <p><strong>Mejora:</strong> Agrega numeración automática.</p>
+                    <details style="margin-top: var(--space-sm);">
+                        <summary style="cursor: pointer; color: var(--color-primary);">Ver solución</summary>
+                        <pre
+                            style="background: #1e1e1e; padding: var(--space-sm); border-radius: var(--radius-md); color: #d4d4d4; margin-top: var(--space-sm); overflow-x: auto;"><code>tareas = ["Estudiar Python", "Hacer ejercicio", "Leer un libro"]
+
+for i, tarea in enumerate(tareas, 1):
+    print(f"{i}. {tarea}")</code></pre>
+                    </details>
+                </div>
+
+                <div class="card">
+                    <h3>✅ Ejercicio 4: Función Personalizada</h3>
+                    <p>Crea una función que determine si un número es par o impar:</p>
+                    <pre
+                        style="background: #1e1e1e; padding: var(--space-sm); border-radius: var(--radius-md); color: #d4d4d4; overflow-x: auto;"><code>def es_par(numero):
+if numero % 2 == 0:
+        return True
+    else:
+        return False
+
+# Prueba:
+print(es_par(4))   # True
+print(es_par(7))  # False</code></pre>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>💡 Cómo Piensan los Programadores</h2>
+                <p>Programar no es memorizar sintaxis. Es aprender a <strong>dividir problemas grandes en pasos
+                        pequeños</strong>.</p>
+
+                <div
+                    style="background: var(--color-darker); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-md) 0;">
+                    <h3>Ejemplo: Hacer un sándwich</h3>
+                    <p><strong>Pensamiento humano:</strong> "Haceun sándwich"</p>
+                    <p><strong>Pensamiento de programador:</strong></p>
+                    <ol>
+                        <li>Obtener dos rebanadas de pan</li>
+                        <li>Abrir el frasco de mantequilla de maní</li>
+                        <li>Tomar un cuchillo</li>
+                        <li>Untar mantequilla en una rebanada</li>
+                        <li>Cerrar el frasco</li>
+                        <li>Abrir el frasco de mermelada</li>
+                        <li>Untar mermelada en la otra rebanada</li>
+                        <li>Cerrar el frasco</li>
+                        <li>Juntar las dos rebanadas</li>
+                    </ol>
+                    <p style="color: var(--color-primary); margin-top: var(--space-md);">
+                        <strong>Esta mentalidad paso a paso es la esencia de la programación.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🎯 Conceptos Clave</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">📦</div>
+                        <h3 class="card-title">Variables</h3>
+                        <p class="card-description">Cajas etiquetadas para guardar información.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔀</div>
+                        <h3 class="card-title">Control de Flujo</h3>
+                        <p class="card-description">IF para decisiones, FOR para repeticiones.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📝</div>
+                        <h3 class="card-title">Listas</h3>
+                        <p class="card-description">Colecciones ordenadas de datos.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚙️</div>
+                        <h3 class="card-title">Funciones</h3>
+                        <p class="card-description">Bloques de código reutilizables.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section"
+                style="background: var(--color-darker); padding: var(--space-xl); border-radius: var(--radius-lg);">
+                <h2>🚀 Lo Que Ahora Puedes Hacer</h2>
+                <p>Con estos fundamentos de programación, ahora puedes:</p>
+                <ul style="font-size: 1.125rem; line-height: 1.8;">
+                    <li>✅ <strong>Automatizar tareas repetitivas:</strong> Scripts que ahorran tiempo</li>
+                    <li>✅ <strong>Entender cómo funcionan las aplicaciones:</strong> Todo es código ejecutándose</li>
+                    <li>✅ <strong>Comunicarte con desarrolladores:</strong> Entiendes la lógica detrás del software</li>
+                    <li>✅ <strong>Continuar aprendiendo:</strong> Tienes la base para aprender cualquier lenguaje</li>
+                </ul>
+                <p
+                    style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-top: var(--space-lg);">
+                    La programación es un superpoder. Ahora ya diste tus primeros pasos.
+                </p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: var(--space-2xl);">
+                <a href="capitulo-01.html" class="btn btn-secondary">← Cap. Anterior</a>
+                <a href="capitulo-03.html" class="btn btn-primary">Siguiente: La Web →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Capítulo 2 de 6 - Fundamentos Digitales</p>
+            <p><a href="../index.html">Volver al índice principal</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
