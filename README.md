@@ -1,12 +1,12 @@
-# 📚 eBook: Fundamentos Digitales
+# 🌐 Fundamentos Digitales
 
 ## Guía Práctica para Entender el Siglo XXI
 
-Un ebook interactivo en español que transforma el conocimiento técnico del curso Stanford CS105 en una **guía práctica y empoder adora**. Aprende cómo funciona realmente la tecnología que usas todos los días.
+Un **sitio web educativo interactivo** en español que transforma el conocimiento técnico del curso Stanford CS105 en una **guía práctica y empoderadora**. Aprende cómo funciona realmente la tecnología que usas todos los días.
 
 ## 🌟 De Consumidor a Creador
 
-Este libro no es un manual técnico enciclopédico. Es una **guía práctica** que te ayuda a entender cómo funciona la tecnología detrás de las interfaces que usas a diario, preparándote para ser un líder informado del siglo XXI.
+Este sitio no es un manual técnico enciclopédico. Es una **guía interactiva práctica** que te ayuda a entender cómo funciona la tecnología detrás de las interfaces que usas a diario, preparándote para ser un líder informado del siglo XXI.
 
 ## 📖 Contenido
 
@@ -55,7 +55,7 @@ Resumen de conceptos clave y próximos pasos para seguir aprendiendo.
 
 ---
 
-## ✨ Características
+## ✨ Características del Sitio
 
 - ✅ **Enfoque Pedagógico**: Analogías del mundo real y tono conversacional
 - ✅ **Prácticas en Cada Capítulo**: Ejercicios aplicables inmediatamente
@@ -63,6 +63,7 @@ Resumen de conceptos clave y próximos pasos para seguir aprendiendo.
 - ✅ **Diseño Moderno**: Gradientes, animaciones, responsive
 - ✅ **Contenido Empoderador**: De consumidor a creador
 - ✅ **6 Capítulos Fundamentales**: Cobertura de lo esencial
+- ✅ **Acceso Web**: Sin descargas, accesible desde cualquier navegador
 
 ##  🚀 Cómo Usar
 
@@ -103,4 +104,4 @@ Contenido educativo basado en el curso Stanford CS105. Creado con fines educativ
 
 ---
 
-**¡Comienza tu viaje digital ahora!** Abre `index.html` y descubre cómo funciona realmente la tecnología.
+**¡Comienza tu viaje digital ahora!** Visita el sitio en [felipet1987.github.io/fundamentos-digitales](https://felipet1987.github.io/fundamentos-digitales/) o abre `index.html` localmente.
